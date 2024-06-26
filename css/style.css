@@ -8,6 +8,9 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 /* General */
+:root{
+    --main-purple: #9792E4; 
+}
 .container{
     max-width: 1000px;
     margin: 0 auto;
@@ -24,6 +27,17 @@ html{
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
+}
+img{
+    max-width: 100%;
+}
+.my-btn{
+    background-color: #0084FD;
+    color: white;
+    display: inline-block;
+    border-radius: 50px;
+    padding: 6px 10px;
+    text-decoration: none;
 }
 /* Header */
 header{
@@ -47,27 +61,6 @@ header{
     color: white;
     text-decoration: none;
 }
-/* Responsive */
-/* Tablet */
-@media screen and (min-width:576px) {
-    .my-col.my-col-tablet-1-3{
-        width: calc((100% / 3) - 20px);
-    }
-    .my-col.my-col-tablet-2-3{
-        width: calc(((100% / 3) * 2) - 20px);
-    }
-    
-}
-/* Desktop */
-@media screen and (min-width:992px) {
-  .mobile-menu{
-    display: none;
-  }
-  .desktop-menu{
-    display: block;
-  }
-  
-}
 /* Main*/
 main > section{
     padding: 40px 0;
@@ -77,12 +70,47 @@ main > section{
     background-color: #B5DDFF;
     border-radius: 10px;
     padding: 10px;
+    height: 100%;
 }
-
-
-
-
-
+#intro .card h4,
+#intro .card > i {
+    color: #0084FD;
+}
+/* Planning */
+#planning{
+    background-color: var(--main-purple);
+}
+/* Testimonials */
+#testimonials .card{
+    background-color: var(--main-purple);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#testimonials .card > :first-child{
+    height: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: o auto;
+}
+#testimonials .card > :last-child{
+    flex-grow: 1;
+}
+/* Benefits */
+#benefits{
+    background-color: var(--main-purple);
+}
+#benefits .card{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
 /* Footer-top */
 
 
@@ -95,4 +123,71 @@ main > section{
 /* Debug */
 .debug{
     border-radius: 1px bold black;
+}
+/* Responsive */
+/* Tablet */
+@media screen and (min-width:576px) {
+    .my-col.my-col-tablet-1-2{
+        width: calc(50%- 20px);
+    }
+    .my-col.my-col-tablet-1-3{
+        width: calc((100% / 3) - 20px);
+    }
+    .my-col.my-col-tablet-2-3{
+        width: calc(((100% / 3) * 2) - 20px);
+    }
+    .my-col.my-col-tablet-2-5{
+        width: calc(((100% / 5) * 2) - 20px);
+    }
+    .my-col.my-col-tablet-3-5{
+        width: calc(((100% / 5) * 3) - 20px);
+    }
+    #intro .card.special-card > :last-child{
+        justify-content: flex-start;
+    }
+    #testimonials .card{
+        text-align: left;
+        display: flex;
+    }
+}
+/* Desktop */
+@media screen and (min-width:992px) {
+  .mobile-menu{
+    display: none;
+  }
+  .desktop-menu{
+    display: block;
+    
+  }
+  .my-col.my-col-desktopt-1-2{
+    width: calc(50%- 20px);
+}
+  .my-col.my-col-desktop-1-3{
+    width: calc((100% / 3) - 20px);
+}
+  #intro .card.special-card{
+    display: flex;
+    padding: 0;
+}
+#intro .card.special-card > *{
+    width: 50%;
+}
+#intro .card.special-card > :first-child{
+    padding: 10px;
+}
+#intro .card.special-card > :last-child{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#intro .card.special-card > :last-child > img{
+    max-height: 300px;
+}
+.my-col.my-col-desktop-1-2{
+    width: calc(50% - 20px);
+}
+#planning .container{
+    padding-left: 100px;
+    padding-right: 100px;
+}
 }
