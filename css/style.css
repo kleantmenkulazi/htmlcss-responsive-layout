@@ -11,13 +11,19 @@ html{
 .container{
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 .my-row{
     display: flex;
     flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
 }
 .my-row > .my-col {
-    width: 100%;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }
 /* Header */
 header{
@@ -45,10 +51,10 @@ header{
 /* Tablet */
 @media screen and (min-width:576px) {
     .my-col.my-col-tablet-1-3{
-        width: calc(100% / 3);
+        width: calc((100% / 3) - 20px);
     }
     .my-col.my-col-tablet-2-3{
-        width: calc((100% / 3) * 2);
+        width: calc(((100% / 3) * 2) - 20px);
     }
     
 }
@@ -60,9 +66,7 @@ header{
   .desktop-menu{
     display: block;
   }
-  .my-col.my-col-desktop-1-4{
-  width: calc(100% / 4);      
-  }
+  
 }
 /* Main*/
 main > section{
