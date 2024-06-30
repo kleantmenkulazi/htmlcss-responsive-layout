@@ -46,7 +46,7 @@ img{
 .my-btn.btn-white{
     background-color: white;
     color: black;
-    padding: 6px 8px;
+    padding: 6px 12px;
 }
 /* Header */
 header{
@@ -103,16 +103,66 @@ main > section{
 #intro .card{
     background-color: #B5DDFF;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px 10px;
     height: 100%;
+    text-align: center;
 }
 #intro .card h4,
 #intro .card > i {
-    color: #0084FD;
+    color: var(--main-blue);
+}
+#intro .card h4 {
+    font-size: 1.25rem;
+    margin: 20px 0;
+}
+#intro .card p {
+    line-height: 30px;
+    color: grey;
+    margin-bottom: 20px;
+}
+#intro .card.special-card{
+    padding-bottom: 0;
+    text-align: left;
 }
 /* Planning */
 #planning{
     background-color: var(--main-purple);
+}
+#planning .my-row{
+    align-items: flex-end;
+}
+#planning-first-column{
+    color: white;
+}
+#planning-first-column img{
+    margin: 60px 0;
+    width: 100%;
+}
+#planning-first-column h2{
+    margin: 40px 0;
+}
+#planning-second-column .card{
+    padding: 10px;
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+}
+#planning-second-column .card img{
+    width: 80%;
+}
+#planning-second-column .card p{
+    margin: 30px 0;
+}
+#planning-second-column .card .my-btn{
+    background-color: var(--main-purple);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0;
+    color: black;
+
 }
 /* Testimonials */
 #testimonials .card{
@@ -228,6 +278,7 @@ footer{
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    padding-top: 60px;
 }
 #intro .card.special-card > :last-child > img{
     max-height: 300px;
