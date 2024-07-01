@@ -48,6 +48,30 @@ img{
     color: black;
     padding: 6px 12px;
 }
+.my-btn.btn-purple{
+    background-color: var(--main-purple);
+    color: white;
+    padding: 6px 12px;
+}
+.my-btn.btn-small{
+    font-size: 0.8rem;
+}
+.circle-img{
+    height: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: o auto;
+    overflow: hidden;
+}
+.circle-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /* Header */
 header{
     background-color: var(--main-blue);
@@ -57,7 +81,7 @@ header{
     left: 0;
     right: 0;
     height: 60px;
-
+    z-index: 1;
 }
 header > *{
     height: 100%;
@@ -165,14 +189,33 @@ main > section{
 
 }
 /* Testimonials */
+#testimonials{
+    text-align: center;
+}
+#testimonials h2{
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+#testimonials h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--main-purple);
+    font-weight: bold;
+}
+#testimonials .main-p{
+    margin-bottom: 20px;
+}
 #testimonials .card{
     background-color: var(--main-purple);
     color: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px 10px;
     text-align: center;
     margin-bottom: 20px;
 }
+/*
 #testimonials .card > :first-child{
     height: 150px;
     height: 150px;
@@ -182,9 +225,21 @@ main > section{
     justify-content: center;
     flex-shrink: 0;
     margin: o auto;
+    overflow: hidden;
 }
+#testimonials .card > :first-child img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}*/
 #testimonials .card > :last-child{
     flex-grow: 1;
+}
+#testimonials .card > :last-child p{
+    margin: 20px 0;
+}
+#testimonials .card > :last-child h4{
+    text-transform: uppercase;
 }
 /* Features */
 #features{
@@ -194,6 +249,51 @@ main > section{
     background-color: white;
     border-radius: 10px;
     padding: 10px;
+}
+#features h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+#features .card h3{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: var(--main-purple);
+    font-weight: bold;
+}
+#features .card h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--main-purple);
+    font-weight: bold;
+}
+#features .card p {
+    line-height: 30px;
+    color: grey;
+    margin-bottom: 20px;
+}
+/* About Us */
+#about-us h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: var(--main-purple);
+    font-weight: bold;
+}
+#about-us p {
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+#about-us .about-img-container{
+    position: relative;
+    display: inline-block;
+}
+#about-us .about-img-container > i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--main-purple);
 }
 /* Footer */
 footer{
@@ -246,6 +346,17 @@ footer{
     #testimonials .card{
         text-align: left;
         display: flex;
+    }
+    #testimonials .card > :first-child{
+        margin-right: 20px;
+    }
+    #testimonials .card > :last-child{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #testimonials .card > :last-child p{
+        margin-top: 0;
     }
 }
 /* Desktop */
